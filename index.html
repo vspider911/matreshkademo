@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Матрёшка — салон красоты у метро Войковская | Демо-сайт с онлайн-записью</title>
+<meta name="description" content="Демо-версия сайта салона красоты «Матрёшка» на Старопетровском проезде, 8: параллельные услуги, онлайн-запись, мастера и отзывы. Телефон, цены и рейтинг условные.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.webp">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="strip">Демо-версия сайта — телефон, цены и рейтинг условные</div>
+
+<header class="top" id="top">
+  <div class="wrap top__in">
+    <a href="#" class="logo" aria-label="Матрёшка — на главную"><i aria-hidden="true"></i>Матрёшка</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#parallel">Две услуги сразу</a>
+      <a href="#team">Мастера</a>
+      <a href="#booking">Запись</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="top__phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+    <a class="btn btn--accent top__btn" href="#booking">Записаться</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__media"><img src="img/hero.webp" alt="Светлый зал салона красоты с круглыми зеркалами" width="1800" height="1200" fetchpriority="high"></div>
+    <div class="hero__shade"></div>
+    <div class="wrap hero__in">
+      <p class="status" data-status><i></i><span>Ежедневно 10:00–22:00</span></p>
+      <h1 class="hero__title">Салон красоты «Матрёшка» у метро Войковская</h1>
+      <p class="hero__lead">Маникюр, волосы, брови, косметология и массаж в одном месте. Две услуги можно сделать одновременно — и уйти на час раньше.</p>
+      <div class="hero__cta">
+        <a class="btn btn--accent btn--lg" href="#booking">Записаться онлайн</a>
+        <a class="btn btn--glass btn--lg" href="#services">Услуги и цены</a>
+      </div>
+      <ul class="stats">
+        <li><b>4,9</b><span>рейтинг на картах</span></li>
+        <li><b>230</b><span>оценок клиентов</span></li>
+        <li><b>10–22</b><span>без выходных</span></li>
+        <li><b>790 м</b><span>от метро Войковская</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="kicker">Услуги</p>
+        <h2>Всё для красоты — под одной крышей</h2>
+        <p class="head__sub">Сразу видно цену и сколько длится процедура. Точную стоимость мастер подтвердит на месте.</p>
+      </div>
+      <div class="cards" id="cards"></div>
+    </div>
+  </section>
+
+  <!-- PARALLEL (sticky scene) -->
+  <section class="par" id="parallel">
+    <div class="wrap par__in">
+      <div class="par__stick">
+        <div class="par__screen">
+          <div class="par__shot is-on"><img src="img/step1.webp" alt="Маникюр с тёмным покрытием" width="1200" height="1800"></div>
+          <div class="par__shot"><img src="img/step2.webp" alt="Косметолог наносит маску кисточкой" width="1200" height="1800"></div>
+          <div class="par__shot"><img src="img/step3.webp" alt="Мастер делает укладку феном" width="1200" height="800"></div>
+          <div class="par__clock"><span data-par-label>1 услуга</span><b>1 ч 30 мин</b><s data-par-old hidden></s></div>
+        </div>
+      </div>
+      <div class="par__steps">
+        <p class="kicker">Параллельные услуги</p>
+        <h2>Две услуги — одно время</h2>
+        <div class="step"><b>01</b><h3>Маникюр</h3><p>Мастер маникюра начинает работу — 1,5 часа, как обычно.</p></div>
+        <div class="step"><b>02</b><h3>+ уход за лицом</h3><p>В это же время косметолог делает уход или массаж лица. Время в салоне не растёт.</p></div>
+        <div class="step"><b>03</b><h3>+ укладка</h3><p>Или волосы: стрижка и укладка, пока сохнет покрытие. Три услуги вместо трёх визитов.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRST VISIT -->
+  <section class="first">
+    <div class="wrap first__in reveal">
+      <div class="first__img"><img src="img/first.webp" alt="Аккуратный нюдовый маникюр" width="1000" height="1500"></div>
+      <div>
+        <p class="kicker">Первый визит</p>
+        <h2>Специальные цены для новых клиентов</h2>
+        <ul class="offers" id="offers"></ul>
+        <a class="btn btn--light" href="#booking" data-book-cat="first">Записаться на первый визит</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section booking" id="booking">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="kicker">Онлайн-запись</p>
+        <h2>Записаться в «Матрёшку»</h2>
+        <p class="head__sub">Прямо здесь, без перехода на другие сайты. Отметьте услуги из разных разделов — и мы проведём их одновременно.</p>
+      </div>
+      <form class="book reveal" id="bookForm" novalidate>
+        <div class="book__col">
+          <h3 class="book__h"><b>1</b>Услуги</h3>
+          <div class="tabs" id="bookTabs"></div>
+          <div class="svc" id="svcList"></div>
+          <div class="par-box" id="parBox" hidden>
+            <label class="switch"><input type="checkbox" id="parToggle" checked><span></span>Делать одновременно</label>
+            <p id="parText"></p>
+          </div>
+        </div>
+        <div class="book__col">
+          <h3 class="book__h"><b>2</b>День и время</h3>
+          <div class="days" id="days"></div>
+          <div class="slots" id="slots"></div>
+          <p class="legend"><span><i class="lg"></i>свободно</span><span><i class="lg lg--busy"></i>занято</span></p>
+
+          <h3 class="book__h"><b>3</b>Контакты</h3>
+          <label class="field"><span>Имя</span><input name="name" autocomplete="name" placeholder="Как к вам обращаться"></label>
+          <label class="field"><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__"></label>
+
+          <div class="sum">
+            <div class="sum__row"><span>Выбрано</span><b id="sumList">ничего</b></div>
+            <div class="sum__row"><span>Когда</span><b id="sumWhen">—</b></div>
+            <div class="sum__row"><span>В салоне</span><b id="sumTime">—</b></div>
+            <div class="sum__total"><span>Итого от</span><b id="sumTotal">0 ₽</b></div>
+          </div>
+          <p class="err" id="bookErr" role="alert"></p>
+          <button class="btn btn--accent btn--lg btn--wide" type="submit">Записаться</button>
+          <p class="note">Это демо: заявка никуда не отправляется. В рабочей версии она сразу придёт администратору, а клиентке — подтверждение и напоминание.</p>
+        </div>
+      </form>
+      <div class="done" id="done" hidden>
+        <h3>Вы записаны</h3>
+        <p id="doneText"></p>
+        <button class="btn btn--line" type="button" id="doneBack">Записаться ещё</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section team" id="team">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="kicker">Мастера</p>
+        <h2>К ним едут с другого конца Москвы</h2>
+        <p class="head__sub">Мастера, которых чаще всего благодарят в отзывах. В рабочей версии — с фото и записью к конкретному мастеру.</p>
+      </div>
+      <div class="team__grid" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about">
+    <div class="wrap about__in">
+      <div class="about__img reveal"><img src="img/about.webp" alt="Рабочие места мастеров в светлом зале" width="1200" height="800"></div>
+      <div class="about__text reveal">
+        <p class="kicker">Атмосфера</p>
+        <h2>Небольшой стильный салон, где хочется задержаться</h2>
+        <p>Чай в красивой чайной паре, спокойная музыка и фильмы, подставки под сумку и телефон. Можно прийти с ребёнком — предупредите заранее.</p>
+        <ul class="facts">
+          <li>Онлайн-запись на параллельные услуги</li>
+          <li>Мужской ногтевой сервис и коррекция бровей</li>
+          <li>Парковка рядом, Wi-Fi</li>
+          <li>Оплата картой</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="kicker">Отзывы</p>
+        <h2>Что пишут клиенты</h2>
+      </div>
+      <div class="rv" id="rv"></div>
+    </div>
+  </section>
+
+  <!-- COWORKING -->
+  <section class="cowork">
+    <div class="wrap cowork__in reveal">
+      <div>
+        <p class="kicker">Для мастеров</p>
+        <h2>Бьюти-коворкинг на Войковской</h2>
+        <p>Рабочее место для мастеров маникюра, парикмахеров, бровистов и визажистов, кабинет для косметолога или массажиста. Почасово или абонементом.</p>
+        <ul class="cw-list">
+          <li><span>Рабочее место</span><b>от 600 ₽/час</b></li>
+          <li><span>Кабинет косметолога или массажиста</span><b>от 700 ₽/час</b></li>
+          <li><span>Абонемент на 60 часов</span><b>от 24 000 ₽</b></li>
+        </ul>
+        <a class="btn btn--light" href="#contacts">Узнать условия</a>
+      </div>
+      <div class="cowork__img"><img src="img/cowork.webp" alt="Инструменты мастеров в руках" width="1200" height="800"></div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="section contacts" id="contacts">
+    <div class="wrap contacts__in">
+      <div class="reveal">
+        <p class="kicker">Контакты</p>
+        <h2>Старопетровский проезд, 8</h2>
+        <dl class="dl">
+          <dt>Адрес</dt><dd>Москва, Старопетровский проезд, 8</dd>
+          <dt>Как добраться</dt><dd>Метро «Войковская» — 790 м, около 10 минут пешком</dd>
+          <dt>Часы</dt><dd>Ежедневно 10:00–22:00 <span class="status status--inline" data-status><i></i><span></span></span></dd>
+          <dt>Телефон</dt><dd><a href="tel:+70000000000">+7 (000) 000-00-00</a></dd>
+        </dl>
+        <div class="contacts__btns">
+          <a class="btn btn--accent" href="tel:+70000000000">Позвонить</a>
+          <a class="btn btn--line" href="#contacts">WhatsApp</a>
+          <a class="btn btn--line" href="#contacts">Telegram</a>
+          <a class="btn btn--line" href="https://yandex.ru/maps/?rtext=~55.823566,37.505027&rtt=auto" target="_blank" rel="noopener">Маршрут</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Матрёшка на карте" src="https://yandex.ru/map-widget/v1/?ll=37.505027%2C55.823566&z=16&pt=37.505027%2C55.823566%2Cpm2vvm" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="logo"><i aria-hidden="true"></i>Матрёшка</span>
+    <span>Демо-версия сайта · Старопетровский проезд, 8 · телефон, цены и рейтинг условные</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn--line" href="tel:+70000000000">Позвонить</a>
+  <a class="btn btn--accent" href="#booking">Записаться</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
