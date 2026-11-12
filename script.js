@@ -198,6 +198,7 @@
   /* ---------- Анимации ---------- */
   const top = $('#top'), heroMedia = $('.hero__media'), heroIn = $('.hero__in');
   const steps = $$('.step'), shots = $$('.par__shot'), parLabel = $('[data-par-label]'), parOld = $('[data-par-old]');
+  const screen = $('.par__screen'), dots = $$('.par__dots b');
   const SCENE = [['1 услуга', ''], ['2 услуги одновременно', 'вместо 2 ч 15 мин'], ['3 услуги одновременно', 'вместо 3 ч 15 мин']];
   let ticking = false, lastStep = -1;
   function onScroll() {
@@ -212,10 +213,18 @@
     }
     let best = 0, dist = Infinity;
     steps.forEach((s, i) => { const r = s.getBoundingClientRect(), c = Math.abs(r.top + Math.min(r.height, vh) / 3 - vh / 2); if (c < dist) { dist = c; best = i; } });
+    // прогресс сцены: от первого до последнего шага (0…1) и внутри текущего шага (0…1)
+    const first = steps[0].getBoundingClientRect(), last = steps[steps.length - 1].getBoundingClientRect();
+    const span = last.top - first.top || 1;
+    const sp = Math.min(1, Math.max(0, (vh / 2 - first.top) / span));
+    const cur = steps[best].getBoundingClientRect();
+    const pp = Math.min(1, Math.max(0, (vh * 0.75 - cur.top) / (cur.height + vh * 0.25)));
+    if (!reduce) { screen.style.setProperty('--sp', sp.toFixed(3)); screen.style.setProperty('--pp', pp.toFixed(3)); }
     if (best !== lastStep) {
       lastStep = best;
       steps.forEach((s, i) => s.classList.toggle('is-on', i === best));
       shots.forEach((s, i) => s.classList.toggle('is-on', i === best));
+      dots.forEach((d, i) => d.classList.toggle('is-on', i <= best));
       parLabel.textContent = SCENE[best][0];
       parOld.textContent = SCENE[best][1]; parOld.hidden = !SCENE[best][1];
     }

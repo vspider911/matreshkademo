@@ -19,7 +19,7 @@
 [hidden]{display:none!important}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
 @supports (overflow:clip){html,body{overflow-x:clip}}
-body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans)}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 button,input{font:inherit;color:inherit}
@@ -316,3 +316,12 @@ section[id]{scroll-margin-top:96px}
   .hero__media,.hero__in{transform:none!important;opacity:1!important}
   .step{opacity:1;transform:none}
 }
+
+/* движение фото в сцене «Две услуги — одно время» */
+.par__shot img{height:116%;transform:translate3d(0,calc(var(--pp,0) * -14%),0);will-change:transform}
+.par__bar{position:absolute;left:0;right:0;top:0;height:3px;background:rgba(255,255,255,.18);z-index:2}
+.par__bar i{display:block;height:100%;width:calc(var(--sp,0) * 100%);background:var(--lilac)}
+.par__dots{position:absolute;top:14px;right:14px;display:flex;gap:6px;z-index:2}
+.par__dots b{width:24px;height:3px;background:rgba(255,255,255,.35);transition:background .3s}
+.par__dots b.is-on{background:#fff}
+@media (prefers-reduced-motion:reduce){.par__shot img{height:100%;transform:none}}
